@@ -1,0 +1,13 @@
+<h1>Dreams#show</h1>
+<p>Find me in app/views/dreams/show.html.erb</p>
+
+<p> <%= link_to "Back", dreams_path %> </p> 
+
+
+<h1> post:  <%= @dream.post %> </h1>
+<p> Date: <%= @dream.date %> </p>
+<p> Location : <%= @dream.location %> </p>
+
+
+<%= link_to "edit" , edit_dream_path(@dream) %>
+<p> <%= link_to "Delete Dream" , dream_path(@dream), method: :delete %></p>

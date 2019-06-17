@@ -9,23 +9,40 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   
-  <body>
-
+  <body class="<%= controller_name %> <%= action_name %>">
+ 
   <% if user_signed_in? %>
-
-  <h2>Welcome <%= current_user.email %></h2>
+  <div  class="shadow p-3 mb-4 bg-white rounded">
+  <a href="http://localhost:3000"> <div class="logo"> </div> </a>
+  <h2 class="springy-text">Welcome <%= current_user.email %></h2>
+  <h6>
   <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
   <%= link_to 'Change Password', edit_user_registration_path %>
-
+  </h6>
+  </div>
 <% else %>
 
+ <div class="navbar navbar-expand-sm bg-light justify-content-center">
   <%= link_to "Sign Up", new_user_registration_path %>
   <%= link_to "Sign In", new_user_session_path %>
-
+  <%= link_to "Explore", root_path %>
+  
+</div>
 <% end %>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
     <%= yield %>
+
+<!-- Footer -->
+<footer class="animatedBox">
+
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: Jawaher Abdullah
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
   </body>
 </html>

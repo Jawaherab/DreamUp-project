@@ -1,5 +1,180 @@
 @import "bootstrap";
 
+
+a{
+    padding-left: 30px;
+   
+    
+}
+
+.container-fluid{
+    box-shadow: 0 8px 6px -6px gray;
+    background-image: url("2.jpg");
+    margin: 0%;
+    padding: 0%;
+    height: 800px;
+
+
+}
+.home.index h1{
+    padding-top: 5%;
+    padding-left: 50%;
+    color: rgb(28, 49, 94);
+    font-size: 95px;
+    font-weight: bolder;
+}
+p{
+    
+    padding-left: 50%;
+    color:gray;
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+button.btn.btn-light{
+   margin: 20%;
+   margin-top: 3%;
+   margin-left:62%;
+   padding-right: 40px;
+   font-weight: bold;
+   font-family: fantasy;
+   color: gray;
+}
+
+.card{
+    margin: 40px;
+    height: 10%;
+}
+.card-text{
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+
+.animatedBox {
+    padding: 20px;
+    text-align: center;
+    font: 24px sans-serif;
+    color: white;
+    text-shadow: 1px 1px 2px gray;
+    background:rgb(237, 215, 255);
+    margin: 0px;
+    animation: myAnimation 1s ease 1s 3 alternate forwards;
+  }
+  
+  @keyframes myAnimation {
+    100% {
+      margin-top: 100px;
+    }	
+  }
+
+ 
+  .springy-text {
+    color: black;
+    animation-name: springy-text;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  @keyframes springy-text {
+    0%   {
+      letter-spacing: 1.2em;
+      color: white;
+    }
+    100%   {
+      letter-spacing: 0.1em;
+      color: orange;
+      font-size: 20px;
+    }
+  }
+
+
+  .dreams.index h4{
+
+    
+    width: 40%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   margin-left: 50px;
+   margin-top: 20px;
+   padding: 40px;
+}
+
+.dreams.index h1{
+ color: coral;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-size: 50px;
+ font-weight: bold;
+ text-align: left;
+ margin-left: 60px;
+}
+.img{
+  background-image:url("3.png");
+  background-size: 50%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  margin-top: 1%;
+  padding-top: 30px;
+ 
+ }
+ 
+ .butn {
+  background: #bc63f0;
+  background-image: -webkit-linear-gradient(top, #bc63f0, #5c2bb8);
+  background-image: -moz-linear-gradient(top, #bc63f0, #5c2bb8);
+  background-image: -ms-linear-gradient(top, #bc63f0, #5c2bb8);
+  background-image: -o-linear-gradient(top, #bc63f0, #5c2bb8);
+  background-image: linear-gradient(to bottom, #bc63f0, #5c2bb8);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 40px 10px 20px;
+  text-decoration: none;
+  margin-left: 15%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.butn:hover {
+  background: #8d30d9;
+  background-image: -webkit-linear-gradient(top, #8d30d9, #a076f0);
+  background-image: -moz-linear-gradient(top, #8d30d9, #a076f0);
+  background-image: -ms-linear-gradient(top, #8d30d9, #a076f0);
+  background-image: -o-linear-gradient(top, #8d30d9, #a076f0);
+  background-image: linear-gradient(to bottom, #8d30d9, #a076f0);
+  text-decoration: none;
+}
+
+
+  .logo { 
+    background: url("4.png") no-repeat; 
+    background-size: 100%;
+    width: 300px; 
+    height: 100px;
+    background-size: 70px;
+    display: inline;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: -130px;
+  
+   
+  
+  }
+  
+  
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -15,3 +190,38 @@
  *= require_tree .
  *= require_self
  */
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  max-width: 500px;
+  padding: 5%;
+  background-color: white;
+  
+}
+
+
+.dreams.index p{
+  color: coral;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 0;
+  padding-top: 10px;
+  
+ }
+
+ .h66{
+  color:rgb(48, 9, 92);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 0;
+  padding-top: 10px;
+  
+ }

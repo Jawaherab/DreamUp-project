@@ -2,6 +2,8 @@ class DreamsController < ApplicationController
   before_action :set_dream, only: [:show, :edit, :update, :destroy]
   
   def index
+    @dream = current_user.dreams.new
+
     @dreams = current_user.dreams
   end
 
@@ -32,10 +34,10 @@ class DreamsController < ApplicationController
     respond_to do |format|
       if @dream.update(dream_params)
         format.html { redirect_to @dream, notice: 'Dream was successfully updated.' }
-        format.json { render :show, status: :ok, location: @dream }
+      
       else
         format.html { render :edit }
-        format.json { render json: @dream.errors, status: :unprocessable_entity }
+       
       end
     end
   end
@@ -46,7 +48,7 @@ class DreamsController < ApplicationController
     @dream.destroy
     respond_to do |format|
       format.html { redirect_to dreams_url, notice: 'Dream was successfully destroyed.' }
-      format.json { head :no_content }
+
     end
   end
 

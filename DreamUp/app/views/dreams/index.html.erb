@@ -1,14 +1,41 @@
-<h1>Dreams#index</h1>
-<p>Find me in app/views/dreams/index.html.erb</p>
 
-<h1>Share Your Dream</h1>
+
+  <div class="img">
+  <h1> Your Dreams List</h1>
 
 <% @dreams.each do |dream|%>
 
     <h4> 
-  <%= link_to dream.post, dream_path(dream) %>
+   
+    <%= link_to dream.post, dream %>
   </h4>
+
   <% end %>
+</div>
 
 
-  <%= link_to 'New Dream' , new_dream_path %>
+<button class="butn" onclick="openForm()" > New Dreams </button>
+
+
+<div class="form-popup" id="myForm">
+<%= form_for @dream, url: {action: "create"} do |f| %>
+    <h6 class="h66">Share your dream</h6>
+
+    <p> Post </p>
+    <div class="form"> <%= f.text_field :post %> </div>
+    <p> Date</p>
+    <%= f.date_field :date%>
+    <p> Location </p>
+    <%= f.text_field :location %>
+ 
+
+    
+     <br>
+     <br>
+     <div style="margin-left:35px;">
+     <%= f.submit "Save" %>
+    <button type="button" onclick="closeForm()">Close</button>
+    </div>
+  <% end %>
+</div>
+

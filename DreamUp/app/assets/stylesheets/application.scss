@@ -45,6 +45,8 @@ button.btn.btn-light{
     margin: 40px;
     height: 10%;
 }
+
+
 .card-text{
     text-align: center;
     margin: 0%;
@@ -53,6 +55,27 @@ button.btn.btn-light{
     padding-bottom: 10px;
 }
 
+.card-show{
+  text-align: center;
+  color: #1d0844;
+  margin: 0%;
+  padding-top: 1%;
+  font-size: 100px;
+  padding-bottom: 10px;
+
+}
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 1;
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
 
 .animatedBox {
     padding: 20px;
@@ -60,7 +83,7 @@ button.btn.btn-light{
     font: 24px sans-serif;
     color: white;
     text-shadow: 1px 1px 2px gray;
-    background:rgb(237, 215, 255);
+    background:rgb(230, 226, 255);
     margin: 0px;
     animation: myAnimation 1s ease 1s 3 alternate forwards;
   }
@@ -225,3 +248,70 @@ button.btn.btn-light{
   padding-top: 10px;
   
  }
+
+ .nav2{
+   display: inline;
+   font-size: 10px;
+   color: rgb(133, 2, 89);
+  text-align: center;
+ }
+
+ .dreams.show p{
+  color: rgb(40, 0, 77);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  padding-left: 0;
+
+  
+  
+ }
+ .dreams.show h4{
+  color: coral;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 0px;
+  padding-top: 10px;
+
+
+ }
+
+ .dreams.show{
+  background-image: url("9.png");
+  background-size: 50%;
+
+
+
+ }
+
+
+ .home.index{
+  background-color: rgb(245, 244, 255);
+ 
+ 
+  }
+
+  .img2{
+    background-image:url("7.gif");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    margin-top: 1%;
+    padding-top: 30%;
+    float: center;
+   
+
+   
+   }
+
+   .container4{
+    display: flex;
+  
+   }
+    
+   
+   .box{
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    float: right;
+   }

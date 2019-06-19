@@ -1,13 +1,87 @@
-<h1>Dreams#show</h1>
-<p>Find me in app/views/dreams/show.html.erb</p>
-
-<p> <%= link_to "Back", dreams_path %> </p> 
 
 
-<h1> post:  <%= @dream.post %> </h1>
-<p> Date: <%= @dream.date %> </p>
-<p> Location : <%= @dream.location %> </p>
 
 
-<%= link_to "edit" , edit_dream_path(@dream) %>
-<p> <%= link_to "Delete Dream" , dream_path(@dream), method: :delete %></p>
+<div class="card" style="width: 50%; margin-left:25%; box-shadow: 0 4px 8px 0 gray;">
+
+<div class="card-body">
+<div class="card-img">
+<img src="https://placeimg.com/380/230/nature" alt="">
+</div>
+
+<p class="card-show"><%= @dream.post %> </p>
+<h4 class="card-show"><%= @dream.date %> </h4> 
+<h4 class="card-show"> <%= @dream.location %>  </h4>
+<%if user_signed_in? %>
+  <%if current_user.id == @dream.user_id %>
+  <button  class="nav2" onclick="openForm()"> Edit </button>
+  <button  class="nav2"> <%= link_to "Delete " , dream_path(@dream), method: :delete %></button>
+  <%end%>
+<%end%>
+
+<div style="margin-left: 230px;">
+<button class="nav2"> <%= link_to "Back", root_path %> </button> 
+
+
+<br> <br> 
+
+<h6> add comment </h6>
+
+
+<div>
+  
+  <h3>Post a Comment</h3>
+
+
+   <%   @dream.comments.each do |comment|%>
+    <p class="comment"> <%= comment.body %></p> 
+    <% end %>
+
+    <% if user_signed_in? %>
+    <%= render "comments/new"  %>
+    <%else%>
+
+    <%end%>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- <h4 class="card-title"><%#current_user.email %></h4> -->
+
+
+
+
+
+<div class="form-popup" id="myForm">
+<%= form_for @dream, url: {action: "update"} do |f| %>
+    <h6 class="h66">Update your dream</h6>
+    
+    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+    <label for="fileupload"> Select a image to upload</label>  </form>
+
+    <h4> Post </h4>
+    <div class="form"> <%= f.text_field :post %> </div>
+    <h4> Date</h4>
+    <%= f.date_field :date%>
+    <h4> Location </h4>
+    <%= f.text_field :location %>
+ 
+
+    
+     <br>
+     <br>
+     <div style="margin-left:35px;">
+     <%= f.submit "Save" %>
+    <button type="button" onclick="closeForm()">Close</button>
+    </div>
+  <% end %>
+</div>

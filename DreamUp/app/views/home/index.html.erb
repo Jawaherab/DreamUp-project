@@ -1,33 +1,38 @@
 
 
 <div class="container-fluid">
- <h1> DREAM UP </h1>
- <p> share your dreams</p>
+  <h1> DREAM UP </h1>
+  <p> share your dreams</p>
 
- <button type="button" class="btn btn-light"><%= link_to 'Lets Dream' , dreams_path %></button>
-
-</div>
-
-<div class="card" style="max-width: 20rem;">
-
-<div class="card-body">
-<h4 class="card-title">@user</h4>
-<p class="card-text">Here are the top resources for all things related to the Sun.</p>
-<!-- Links -->
-<a href="#" class="card-link">see more</a>
-</div>
+  <button type="button" class="btn btn-light"><%= link_to 'Lets Dream' , dreams_path %></button>
 
 </div>
 
-<div class="card" style="max-width: 20rem;">
+<% @dreams.each do |dream| %>
+    <div class="card" style="max-width: 20rem;float:left">
 
-<div class="card-body">
-<h4 class="card-title">Sun Gone</h4>
-<p class="card-text">Here are the top resources for all things related to the Sun.</p>
-<!-- Links -->
-<a href="#" class="card-link">see more</a>
-</div>
+        <div class="card-body">
+            <div class="card-img">
+                <img src="https://placeimg.com/380/230/nature" alt="">
+            </div>
+            <br>
+            <h4 class="card-title"><%= dream.user.user_name%></h4>
+            <p class="card-text"><%= dream.post %></p>
+            <%= link_to "see more", dream %>
+        </div>
+    </div>
 
 </div>
+<% end %>
+<div style="clear:both"></div>
+
+
+
+
+
+
+
+
+
 
 

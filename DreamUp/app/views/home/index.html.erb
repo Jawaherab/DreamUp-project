@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
   <h1> DREAM UP </h1>
-  <p> share your dreams</p>
+  <p>The best place to make dreams come true</p>
 
   <button type="button" class="btn btn-light"><%= link_to 'Lets Dream' , dreams_path %></button>
 
@@ -13,7 +13,9 @@
 
         <div class="card-body">
             <div class="card-img">
-                <img src="https://placeimg.com/380/230/nature" alt="">
+            <% if dream.avatar.attached?%>
+            <img style="width:100%;" src="<%=(url_for(dream.avatar)) %>" >
+             <% end %>
             </div>
             <br>
             <h4 class="card-title"><%= dream.user.user_name%></h4>
@@ -25,6 +27,11 @@
 </div>
 <% end %>
 <div style="clear:both"></div>
+
+<div class="qoute">  When one dreams alone, it remains a dream. But if we all dream together, it becomes reality
+</div>
+
+
 
 
 

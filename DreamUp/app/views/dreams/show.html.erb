@@ -6,35 +6,43 @@
 
 <div class="card-body">
 <div class="card-img">
-<img src="https://placeimg.com/380/230/nature" alt="">
-</div>
 
+</div>
+<% if @dream.avatar.attached?%>
+<img style= "width:100%" src="<%=(url_for(@dream.avatar)) %>" >
+ <% end %>
+ 
 <p class="card-show"><%= @dream.post %> </p>
 <h4 class="card-show"><%= @dream.date %> </h4> 
 <h4 class="card-show"> <%= @dream.location %>  </h4>
+
 <%if user_signed_in? %>
   <%if current_user.id == @dream.user_id %>
-  <button  class="nav2" onclick="openForm()"> Edit </button>
+  <button  class="nav2" onclick="openForm()"> Edit </button> <br>
   <button  class="nav2"> <%= link_to "Delete " , dream_path(@dream), method: :delete %></button>
   <%end%>
 <%end%>
 
-<div style="margin-left: 230px;">
+<br>
 <button class="nav2"> <%= link_to "Back", root_path %> </button> 
 
 
 <br> <br> 
 
-<h6> add comment </h6>
 
-
-<div>
+<div style="margin-left: 20px;">
+<div class="comment">
   
-  <h3>Post a Comment</h3>
+  <h4> Add a Comment</h4>
 
 
    <%   @dream.comments.each do |comment|%>
-    <p class="comment"> <%= comment.body %></p> 
+
+    <ul class="list-group">
+    <li class="list-group-item"> <h4> <%= comment.user_name %> </h4>  :  <%= comment.body %> </li>
+  
+  </ul>
+ 
     <% end %>
 
     <% if user_signed_in? %>
@@ -64,10 +72,11 @@
 <div class="form-popup" id="myForm">
 <%= form_for @dream, url: {action: "update"} do |f| %>
     <h6 class="h66">Update your dream</h6>
-    
-    <form action="myform.cgi"> <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
-    <label for="fileupload"> Select a image to upload</label>  </form>
-
+    <% if @dream.avatar.attached?%>
+    <img src="<%=(url_for(@dream.avatar)) %>" >
+     <% end %>
+    <h4> <%= f.label "Upload Image" %> </h4>
+    <%= f.file_field :avatar %> <br>
     <h4> Post </h4>
     <div class="form"> <%= f.text_field :post %> </div>
     <h4> Date</h4>
@@ -85,3 +94,6 @@
     </div>
   <% end %>
 </div>
+
+
+

@@ -3,7 +3,6 @@ class DreamsController < ApplicationController
   
   def index
     @dream = current_user.dreams.new
-
     @dreams = current_user.dreams
   end
 
@@ -16,6 +15,7 @@ class DreamsController < ApplicationController
 
   def new
     @dream = current_user.dreams.new
+    
   end
 
   def create
@@ -48,7 +48,8 @@ class DreamsController < ApplicationController
 
   
   def dream_params
-    params.require(:dream).permit(:post, :date, :location)
+    params.require(:dream).permit(:avatar , :post, :date, :location)
+    
   end
 
 end

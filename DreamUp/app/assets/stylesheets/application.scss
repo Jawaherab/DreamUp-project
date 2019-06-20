@@ -9,7 +9,7 @@ a{
 
 .container-fluid{
     box-shadow: 0 8px 6px -6px gray;
-    background-image: url("2.jpg");
+    background-image: image-url("2.jpg");
     margin: 0%;
     padding: 0%;
     height: 800px;
@@ -83,7 +83,7 @@ button.btn.btn-light{
     font: 24px sans-serif;
     color: white;
     text-shadow: 1px 1px 2px gray;
-    background:rgb(230, 226, 255);
+    background:rgb(28, 49, 94);
     margin: 0px;
     animation: myAnimation 1s ease 1s 3 alternate forwards;
   }
@@ -113,7 +113,7 @@ button.btn.btn-light{
     100%   {
       letter-spacing: 0.1em;
       color: orange;
-      font-size: 20px;
+      font-size: 35px;
     }
   }
 
@@ -136,13 +136,12 @@ button.btn.btn-light{
  text-align: left;
  margin-left: 60px;
 }
-.img{
-  background-image:url("3.png");
+.dreams.index{
+  background-image: image-url("3.png");
   background-size: 50%;
-  background-position: right bottom;
+  background-position: right;
   background-repeat: no-repeat;
-  margin-top: 1%;
-  padding-top: 30px;
+  padding-bottom: 30px;
  
  }
  
@@ -178,7 +177,7 @@ button.btn.btn-light{
 
 
   .logo { 
-    background: url("4.png") no-repeat; 
+    background: image-url("4.png") no-repeat; 
     background-size: 100%;
     width: 300px; 
     height: 100px;
@@ -251,15 +250,15 @@ button.btn.btn-light{
 
  .nav2{
    display: inline;
-   font-size: 10px;
+   font-size: 20px;
    color: rgb(133, 2, 89);
-  text-align: center;
+  text-align: left;
  }
 
  .dreams.show p{
   color: rgb(40, 0, 77);
   font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
+  font-size: 40px;
   padding-left: 0;
 
   
@@ -268,7 +267,7 @@ button.btn.btn-light{
  .dreams.show h4{
   color: coral;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   padding-left: 0px;
   padding-top: 10px;
@@ -277,7 +276,7 @@ button.btn.btn-light{
  }
 
  .dreams.show{
-  background-image: url("9.png");
+  background-image: image-url("9.png");
   background-size: 50%;
 
 
@@ -286,18 +285,20 @@ button.btn.btn-light{
 
 
  .home.index{
-  background-color: rgb(245, 244, 255);
+  background-color: rgb(244, 246, 255);
  
  
   }
 
   .img2{
-    background-image:url("7.gif");
-    background-size: 30%;
+    background-image: image-url("7.gif");
+    background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 1%;
     padding-top: 30%;
     float: center;
+    width: 400px;
+    margin-top: 7%;
    
 
    
@@ -305,13 +306,74 @@ button.btn.btn-light{
 
    .container4{
     display: flex;
+    width: 100%;
   
    }
     
-   
-   .box{
-    float: left;
-    width: 33.33%;
-    padding: 50px;
-    float: right;
+   .content{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
    }
+
+
+   .comment{
+       margin-left: 1%;
+   }
+
+   .field input
+   {
+     width: 400px;
+   }
+
+   .signup{
+    text-align:center; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    margin-right: 80px;
+    background-color: #ffffff;
+   }
+
+   .signup h2{
+     color:white;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-weight: bold;
+     background-color: #128b8b;
+     padding: 5px;
+     margin-bottom: 15px;
+   
+   }
+
+   .signup h3{
+    color: rgb(51, 2, 66);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 2%;
+  
+  }
+
+  .registrations.new{
+    background-image: image-url("10.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .sessions.new{
+    background-image: image-url("10.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .qoute{
+    background-color:pink;
+    width:100%; 
+    text-align:center; 
+    color:white;
+    font-weight: bolder;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+    padding:30px;
+    
+  }

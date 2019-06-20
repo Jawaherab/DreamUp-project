@@ -1,6 +1,6 @@
 
 
-  <div class="img">
+ 
   <h1> My Dreams List</h1>
 
 <% @dreams.each do |dream|%>
@@ -11,7 +11,7 @@
   </h4>
 
   <% end %>
-</div>
+
 
 
 <button class="butn" onclick="openForm()" > New Dreams </button>
@@ -20,7 +20,13 @@
 <div class="form-popup" id="myForm">
 <%= form_for @dream, url: {action: "create"} do |f| %>
     <h6 class="h66">Share your dream</h6>
-
+      
+    <% if @dream.avatar.attached?%>
+    <img   style= "width:100%"  src="<%=(url_for(@dream.avatar)) %>" >
+     <% end %>
+     
+     <p> <%= f.label "Upload Image" %> </p>
+     <%= f.file_field :avatar %> <br>
     <p> Post </p>
     <div class="form"> <%= f.text_field :post %> </div>
     <p> Date</p>
